@@ -33,6 +33,30 @@
         android:layout_height="wrap_content">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/txt_interest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Investment Plan Interest" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txt_paymentperiods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Payments per Year" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/txt_years"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
