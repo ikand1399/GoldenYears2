@@ -8,143 +8,246 @@
     android:padding="26dp"
     tools:context=".Profile">
 
-
-    <TextView
-        android:id="@+id/ame_title"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/user_name_hint" />
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/profile_name_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="20sp"
-        android:gravity="center_horizontal" />
-
-    <Space
-        android:layout_width="330dp"
-        android:layout_height="12dp" />
-
-
-    <TextView
-        android:id="@+id/age_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/user_age_hint" />
-
-    <TextView
-        android:id="@+id/profile_age_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="20sp"
-        android:gravity="center_horizontal" />
-
-    <Space
-        android:layout_width="330dp"
-        android:layout_height="12dp" />
-
-    <TextView
-        android:id="@+id/salary_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/user_salary_title" />
-
-    <TextView
-        android:id="@+id/salary_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="20sp"
-        android:gravity="center_horizontal" />
-
-    <Space
-        android:layout_width="330dp"
-        android:layout_height="12dp" />
-
-    <TextView
-        android:id="@+id/profile_update_prompt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/profile_update_prompt" />
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:counterEnabled="true"
-        app:counterMaxLength="30"
-        app:errorEnabled="true"
-        app:hintAnimationEnabled="true"
-        app:hintEnabled="true">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/text_input_user_name"
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/user_name_hint" />
-    </android.support.design.widget.TextInputLayout>
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            tools:context=".Profile">
+            <TextView
+                android:id="@+id/ame_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_name_hint" />
 
-    <Space
-        android:layout_width="330dp"
-        android:layout_height="12dp" />
+            <TextView
+                android:id="@+id/profile_name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center_horizontal" />
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:counterEnabled="true"
-        app:counterMaxLength="2"
-        app:errorEnabled="true"
-        app:hintAnimationEnabled="true"
-        app:hintEnabled="true">
+            <Space
+                android:layout_width="330dp"
+                android:layout_height="12dp" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/text_input_user_age"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/user_age_hint" />
-    </android.support.design.widget.TextInputLayout>
 
-    <TextView
-        android:id="@+id/salary_title_hint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/user_salary_hint" />
+            <TextView
+                android:id="@+id/age_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_age_hint" />
 
-    <RadioGroup
-        android:id="@+id/radioGroupSalary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/profile_age_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center_horizontal" />
 
-        <RadioButton
-            android:id="@+id/radio_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/profile_income_button1"
-            android:checked="true"/>
+            <Space
+                android:layout_width="330dp"
+                android:layout_height="12dp" />
 
-        <RadioButton
-            android:id="@+id/radio_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/profile_income_button2"/>
+            <TextView
+                android:id="@+id/income_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yearly Income" />
 
-        <RadioButton
-            android:id="@+id/radio_three"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/profile_income_button3"/>
-    </RadioGroup>
+            <TextView
+                android:id="@+id/income_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center_horizontal" />
 
-    <Space
-        android:layout_width="330dp"
-        android:layout_height="12dp" />
+            <Space
+                android:layout_width="330dp"
+                android:layout_height="12dp" />
 
-    <Button
-        android:id="@+id/applyButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/apply_button" />
+            <TextView
+                android:id="@+id/expenses_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yearly Expenses" />
+
+            <TextView
+                android:id="@+id/expenses_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center_horizontal" />
+
+            <Space
+                android:layout_width="330dp"
+                android:layout_height="12dp" />
+
+            <TextView
+                android:id="@+id/periods_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yearly Payments" />
+
+            <TextView
+                android:id="@+id/periods_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center_horizontal" />
+
+            <Space
+                android:layout_width="330dp"
+                android:layout_height="12dp" />
+
+            <TextView
+                android:id="@+id/interest_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yearly Interest" />
+
+            <TextView
+                android:id="@+id/interest_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/profile_update_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_update_prompt" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_input_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/user_name_hint" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Space
+                android:layout_width="330dp"
+                android:layout_height="12dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                app:counterMaxLength="2"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_input_user_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/user_age_hint" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Space
+                android:layout_width="330dp"
+                android:layout_height="12dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_input_yearly_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Yearly Income" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Space
+                android:layout_width="330dp"
+                android:layout_height="12dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_input_yearly_expenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Yearly Expenses" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Space
+                android:layout_width="330dp"
+                android:layout_height="12dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_input_periods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Payments per Year" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_input_yearly_interest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Annual Interest" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Space
+                android:layout_width="330dp"
+                android:layout_height="12dp" />
+
+            <Button
+                android:id="@+id/applyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/apply_button" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
