@@ -71,6 +71,12 @@
         android:text="Calculate" />
 
     <TextView
+        android:id="@+id/estimate_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You will have:" />
+
+    <TextView
         android:id="@+id/estimate_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

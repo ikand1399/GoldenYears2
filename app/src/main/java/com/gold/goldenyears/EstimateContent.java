@@ -69,7 +69,7 @@ public class EstimateContent extends Fragment {
     public double calculation(double income, double expend, double interest, int periods, double years) {
         double paymentAmount = (income - expend)/periods;
         double totalPeriods = periods*years;
-        return paymentAmount * (Math.pow((1+interest-0.02/totalPeriods), totalPeriods)-1)/interest;
+        return paymentAmount*(Math.pow((1+interest/periods), totalPeriods)-1)*(periods/interest);
     }
 
 }
