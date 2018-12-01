@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="26dp"
     tools:context=".HomeContent">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/date_display"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Content" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="" />
+    <Space
+        android:layout_width="330dp"
+        android:layout_height="12dp" />
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="@string/welcomeMessage" />
+    <Space
+        android:layout_width="330dp"
+        android:layout_height="12dp" />
+    <ImageView
+        android:id="@+id/imageViewAppLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:contentDescription="@string/appLogoDescription"
+        android:src="@drawable/golden_years_logo" />
+    <Space
+        android:layout_width="330dp"
+        android:layout_height="12dp" />
+    <TextView
+        android:id="@+id/appIntroMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        app:fontFamily="serif"
+        android:text="@string/homeIntroMessage" />
 
-</FrameLayout>
+</LinearLayout>
