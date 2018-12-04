@@ -1,5 +1,7 @@
 package com.gold.goldenyears;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,13 +18,19 @@ import com.github.mikephil.charting.data.PieData;
 import java.util.ArrayList;
 
 
-public class BudgetContent extends Fragment {
+public class BudgetContent extends Fragment{
 
     public View end;
 
-    public static String TAG = "Pie";
+    float h;
+    float v;
+    float m;
+    float d;
+    float f;
 
-    public float[] yData = {30,20,10,10,30};
+    float[] yData = new float[5];
+
+    public static String TAG = "Pie";
 
     public String[] xData = {"Housing","Vehicle","Food","Miscellaneous","Discretionary"};
 
@@ -39,6 +47,18 @@ public class BudgetContent extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         end = inflater.inflate(R.layout.fragment_budget_content, container, false);
+
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE);
+        h = Float.parseFloat(sharedPreferences.getString("user_housing", "0"));
+        m = Float.parseFloat(sharedPreferences.getString("user_misc", "0"));
+        v =  Float.parseFloat(sharedPreferences.getString("user_vehicle", "0"));
+        d = Float.parseFloat(sharedPreferences.getString("user_disc", "0"));
+        f = Float.parseFloat(sharedPreferences.getString("user_food", "0"));
+        yData[0] = h;
+        yData[1] = v;
+        yData[2] = f;
+        yData[3] = m;
+        yData[4] = d;
 
         pieChart = (PieChart) end.findViewById(R.id.idPieChart);
         pieChart.setRotationEnabled(true);
@@ -81,12 +101,5 @@ public class BudgetContent extends Fragment {
         PieData pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
         pieChart.invalidate();
-
-
-
-
-
     }
-
-
 }
